@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>GrantFinder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>GrantFinder</h1>
+
+    <form action="/result" method="post">
+        <div class="form-group">
+            <label>Сценарий:</label>
+            <select name="scenario">
+                <option value="science">Наука</option>
+                <option value="implementation">Внедрение</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Направление:</label>
+            <select name="direction">
+                <option value="it">IT</option>
+                <option value="ecology">Экология</option>
+                <option value="chemistry">Химия / Материалы</option>
+                <option value="energy">Энергетика</option>
+            </select>
+        </div>
+
+        <button type="submit">Рассчитать рейтинг</button>
+    </form>
+</body>
+</html>
